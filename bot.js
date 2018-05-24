@@ -473,8 +473,7 @@ client.registry
 	.registerDefaults()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.login(bot.token);
-
+client.login(process.env.TOKEN);
 
 async function syncGuildCounts() {
 	postToDBL();
